@@ -28,13 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.textoTitular = new System.Windows.Forms.TextBox();
+            this.textoNumero = new System.Windows.Forms.TextBox();
+            this.textoSaldo = new System.Windows.Forms.TextBox();
+            this.textoValor = new System.Windows.Forms.TextBox();
+            this.botaoDeposito = new System.Windows.Forms.Button();
+            this.botaoSaque = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // textoTitular
+            // 
+            this.textoTitular.Location = new System.Drawing.Point(645, 64);
+            this.textoTitular.Name = "textoTitular";
+            this.textoTitular.Size = new System.Drawing.Size(100, 20);
+            this.textoTitular.TabIndex = 0;
+            // 
+            // textoNumero
+            // 
+            this.textoNumero.Location = new System.Drawing.Point(645, 91);
+            this.textoNumero.Name = "textoNumero";
+            this.textoNumero.Size = new System.Drawing.Size(100, 20);
+            this.textoNumero.TabIndex = 1;
+            // 
+            // textoSaldo
+            // 
+            this.textoSaldo.Location = new System.Drawing.Point(645, 117);
+            this.textoSaldo.Name = "textoSaldo";
+            this.textoSaldo.Size = new System.Drawing.Size(100, 20);
+            this.textoSaldo.TabIndex = 2;
+            // 
+            // textoValor
+            // 
+            this.textoValor.Location = new System.Drawing.Point(645, 165);
+            this.textoValor.Name = "textoValor";
+            this.textoValor.Size = new System.Drawing.Size(100, 20);
+            this.textoValor.TabIndex = 3;
+            // 
+            // botaoDeposito
+            // 
+            this.botaoDeposito.Location = new System.Drawing.Point(645, 204);
+            this.botaoDeposito.Name = "botaoDeposito";
+            this.botaoDeposito.Size = new System.Drawing.Size(75, 23);
+            this.botaoDeposito.TabIndex = 4;
+            this.botaoDeposito.Text = "Depositar";
+            this.botaoDeposito.UseVisualStyleBackColor = true;
+            this.botaoDeposito.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // botaoSaque
+            // 
+            this.botaoSaque.Location = new System.Drawing.Point(645, 234);
+            this.botaoSaque.Name = "botaoSaque";
+            this.botaoSaque.Size = new System.Drawing.Size(75, 23);
+            this.botaoSaque.TabIndex = 5;
+            this.botaoSaque.Text = "Sacar";
+            this.botaoSaque.UseVisualStyleBackColor = true;
+            this.botaoSaque.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botaoSaque);
+            this.Controls.Add(this.botaoDeposito);
+            this.Controls.Add(this.textoValor);
+            this.Controls.Add(this.textoSaldo);
+            this.Controls.Add(this.textoNumero);
+            this.Controls.Add(this.textoTitular);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textoTitular;
+        private System.Windows.Forms.TextBox textoNumero;
+        private System.Windows.Forms.TextBox textoSaldo;
+        private System.Windows.Forms.TextBox textoValor;
+        private System.Windows.Forms.Button botaoDeposito;
+        private System.Windows.Forms.Button botaoSaque;
     }
 }
 
