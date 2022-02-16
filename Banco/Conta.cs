@@ -13,9 +13,16 @@ namespace Banco
             this.Saldo += valor;
         }
 
-        internal void Saque(double valor)
+        public virtual void Saque(double valor)
         {
             this.Saldo -= valor;
+        }
+    }
+    public class ContaPoupanca : Conta
+    {
+        public override void Saque(double valor)
+        {
+            base.Saque(valor + 0.10);
         }
     }
 }

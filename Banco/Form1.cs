@@ -19,32 +19,32 @@ namespace Banco
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.c = new Conta();
-            c.Numero = 1;
+            this.conta = new Conta();
+            conta.Numero = 1;
             Cliente cliente = new Cliente("Victor");
-            c.Titular = cliente;
+            conta.Titular = cliente;
 
-            textoNumero.Text = Convert.ToString(c.Numero);
-            textoSaldo.Text = Convert.ToString(c.Saldo);
-            textoTitular.Text = Convert.ToString(c.Titular.Nome);
+            textoNumero.Text = Convert.ToString(conta.Numero);
+            textoSaldo.Text = Convert.ToString(conta.Saldo);
+            textoTitular.Text = Convert.ToString(conta.Titular.Nome);
 
 
         }
-        private Conta c;
+        private Conta conta;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void botaoDeposito_Click(object sender, EventArgs e)
         {
-            double valorOperacao = Convert.ToDouble(textoValor.Text);
-            c.Deposita(valorOperacao);
-            textoSaldo.Text = Convert.ToString(this.c.Saldo);
+            double valor = Convert.ToDouble(textoValor.Text);
+            conta.Deposita(valor);
+            textoSaldo.Text = Convert.ToString(this.conta.Saldo);
             MessageBox.Show("Sucesso!");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void botaoSaque_Click(object sender, EventArgs e)
         {
-            double valorOperacao = Convert.ToDouble(textoValor.Text);
-            c.Saque(valorOperacao);
-            textoSaldo.Text = Convert.ToString(this.c.Saldo);
+            double valor = Convert.ToDouble(textoValor.Text);
+            conta.Saque(valor);
+            textoSaldo.Text = Convert.ToString(this.conta.Saldo);
             MessageBox.Show("Sucesso!");
         }
     }
