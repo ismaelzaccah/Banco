@@ -19,7 +19,7 @@ namespace Banco
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.conta = new Conta();
+            this.conta = new ContaCorrente();
             conta.Numero = 1;
             Cliente cliente = new Cliente("Victor");
             conta.Titular = cliente;
@@ -28,6 +28,11 @@ namespace Banco
             textoSaldo.Text = Convert.ToString(conta.Saldo);
             textoTitular.Text = Convert.ToString(conta.Titular.Nome);
 
+            
+            conta.Deposita(300);
+            TotalizadorDeContas t = new TotalizadorDeContas();
+            t.Adiciona(conta);
+            MessageBox.Show(Convert.ToString(t.SaldoTotal));
 
         }
         private Conta conta;
